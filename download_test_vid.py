@@ -23,7 +23,8 @@ def download_videos(fname):
 		
 		next(csv_reader)
 		for video_meta in csv_reader:
-			print(video_meta[0])
+			yid = video_meta[0]
+			print(yid)
 	
 			vid_idx += 1
 		
