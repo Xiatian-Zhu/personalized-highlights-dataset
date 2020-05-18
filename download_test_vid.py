@@ -15,9 +15,9 @@ def download_videos(fname):
 
 	with open(fname, newline='') as csvfile:
 		csv_reader = csv.reader(csvfile)
-		pdb.set_trace()
+# 		pdb.set_trace()
 		
-		all_vid_num = len(list(csv_reader)) - 1
+		all_vid_num = 20488 # len(list(csv_reader)) - 1
 		vid_idx = 0
 		dl_vid_num = 0
 		
