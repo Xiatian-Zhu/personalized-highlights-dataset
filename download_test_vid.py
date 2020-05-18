@@ -15,13 +15,13 @@ def download_videos(fname):
 
 	with open(fname, newline='') as csvfile:
 		csv_reader = csv.reader(csvfile)
-		next(csv_reader)
 		pdb.set_trace()
 		
-		all_vid_num = len(csv_reader)
+		all_vid_num = len(list(csv_reader)) - 1
 		vid_idx = 0
 		dl_vid_num = 0
 		
+		next(csv_reader)
 		for video_meta in csv_reader:
 			print(video_meta[0])
 	
