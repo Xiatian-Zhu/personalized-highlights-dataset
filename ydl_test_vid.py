@@ -6,7 +6,6 @@
 '''
 __author__ = 'xzhu'
 
-from __future__ import unicode_literals
 import youtube_dl
 import pdb
 import csv
