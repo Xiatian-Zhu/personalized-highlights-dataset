@@ -10,7 +10,10 @@ import youtube_dl
 import pdb
 import csv
 
-ydl_opts = {}
+ydl_opts = {
+    'outtmpl': '/%(id)s.%(ext)s'
+}
+
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc']) 
 
