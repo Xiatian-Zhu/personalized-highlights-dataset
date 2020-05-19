@@ -11,7 +11,7 @@ import pdb
 import csv
 
 ydl_opts = {
-    'outtmpl': '/%(id)s.%(ext)s'
+    'outtmpl': './%(id)s.%(ext)s'
 }
 
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
