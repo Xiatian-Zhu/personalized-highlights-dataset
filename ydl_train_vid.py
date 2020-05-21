@@ -11,6 +11,7 @@ import pdb
 import csv
 import os.path
 from os import path
+import time
 
 
 def download_videos(fname):
@@ -47,5 +48,7 @@ def download_videos(fname):
 				except:
 					print('\n\n {}-th (all {}/{}) video --- unavailable --- \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
 			
+				time.sleep(2)
+				
 if __name__=='__main__':
     download_videos('training.csv')
