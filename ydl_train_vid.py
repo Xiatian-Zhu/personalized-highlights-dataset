@@ -9,6 +9,8 @@ __author__ = 'xzhu'
 import youtube_dl
 import pdb
 import csv
+import os.path
+from os import path
 
 
 def download_videos(fname):
@@ -32,6 +34,10 @@ def download_videos(fname):
 	
 				vid_idx += 1
 		
+				if path.exists('./train/'+yid+'.mp4'):
+					print('\n\n {}-th (all {}) video !!! Exist !!! \n\n'.format(vid_idx, all_vid_num))
+					continue
+					
 				# To download a video with ID yid
 				vid_link = 'https://www.youtube.com/watch?v=' + yid
 				try:
