@@ -47,12 +47,15 @@ def download_videos(fname):
 					if path.exists('/home/nfs/datasets/PHDD/train/'+yid+'.mp4'):
 						dl_vid_num += 1
 						print('\n\n {}-th (all {}/{}) video ### downloaded ### \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
+						time.sleep(5)
 					else:
 						print('\n\n {}-th (all {}/{}) video *** failed *** \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
+						time.sleep(3)
+						
 				except:
 					print('\n\n {}-th (all {}/{}) video --- unavailable --- \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
+					time.sleep(3)
 			
-				time.sleep(5)
 				
 if __name__=='__main__':
     download_videos('training.csv')
