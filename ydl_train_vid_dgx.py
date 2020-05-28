@@ -46,13 +46,13 @@ def download_videos(fname):
 					ydl.download([vid_link])
 					if path.exists('/home/nfs/datasets/PHDD/train/'+yid+'.mp4'):
 						dl_vid_num += 1
-						print('\n\n {}-th (all {}/{}) video ### downloaded ### \n\n'.format(vid_idx, dl_vid_num, all_vid_num)
+						print('\n\n {}-th (all {}/{}) video ### downloaded ### \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
 					else:
-						print('\n\n {}-th (all {}/{}) video *** failed *** \n\n'.format(vid_idx, dl_vid_num, all_vid_num)
+						print('\n\n {}-th (all {}/{}) video *** failed *** \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
 				except:
 					print('\n\n {}-th (all {}/{}) video --- unavailable --- \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
 			
-				time.sleep(2)
+				time.sleep(5)
 				
 if __name__=='__main__':
     download_videos('training.csv')
