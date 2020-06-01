@@ -63,7 +63,7 @@ def download_videos(fname):
 				if dl_count % 50 == 0:
 					# To change user agent
 					cur_ua = ua_list[ua_idx%len(ua_list)]
-					youtube_dl.utils.std_Headers['User-Agent'] = cur_ua
+					youtube_dl.utils.std_headers['User-Agent'] = cur_ua
 					ua_idx += 1
 				
 				yid = video_meta[0]
