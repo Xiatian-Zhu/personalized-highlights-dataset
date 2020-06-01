@@ -13,6 +13,7 @@ import csv
 import os.path
 from os import path
 import time
+import random
 
 
 def download_videos(fname):
@@ -83,14 +84,14 @@ def download_videos(fname):
 						dl_count += 1
 						dl_vid_num += 1
 						print('\n\n {}-th (all {}/{}) video ### downloaded ### \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
-						time.sleep(5)
+						time.sleep(random.randint(5,7))
 					else:
 						print('\n\n {}-th (all {}/{}) video *** failed *** \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
-						time.sleep(3)
+						time.sleep(random.randint(3,5))
 						
 				except:
 					print('\n\n {}-th (all {}/{}) video --- unavailable --- \n\n'.format(vid_idx, dl_vid_num, all_vid_num))
-					time.sleep(3)
+					time.sleep(random.randint(3,5))
 					
 				
 				
