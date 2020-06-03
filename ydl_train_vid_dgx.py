@@ -48,16 +48,20 @@ def download_videos(fname):
 		]
 	
 		with open(fname, newline='') as csvfile:
-			csv_reader = csv.reader(csvfile)
+			
+			# Go to a break point
+			csv_reader = csv.reader(csvfile, skiprows=[51298])
 		
-			all_vid_num = 201527 # len(list(csv_reader)) - 1
+			# Skip header
+# 			next(csv_reader)
+		
+			all_vid_num = 201527-51298 # len(list(csv_reader)) - 1
 			vid_idx = 0
 			dl_vid_num = 0
 			
 			dl_count = 0
 			ua_idx = 0 # user agent index
 		
-			next(csv_reader)
 			for video_meta in csv_reader:
 				# Setting env
 				if dl_count % 50 == 0:
