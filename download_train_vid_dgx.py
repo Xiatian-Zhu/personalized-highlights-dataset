@@ -55,10 +55,11 @@ def download_videos(fname):
 			# Skip header
 			next(csv_reader)
 			# Jump to a break point
-			for i in range(51298):
+			break_point = 51720
+			for i in range(break_point):
 				next(csv_reader)
 		
-			all_vid_num = 201527-51298 # len(list(csv_reader)) - 1
+			all_vid_num = 201527-break_point # len(list(csv_reader)) - 1
 			vid_idx = 0
 			dl_vid_num = 0
 			
