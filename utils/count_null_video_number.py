@@ -13,7 +13,7 @@ def count_null_video(part):
 
 	video_path = '/home/nfs/datasets/PHDD/' + part
 	
-	videos = glob.glob(video_path+'*.mp4'):
+	videos = glob.glob(video_path+'*.mp4')
 	null_video_num = 0
 	for v in videos:
 		# Check the size of a video
