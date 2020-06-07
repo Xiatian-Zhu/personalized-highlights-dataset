@@ -11,7 +11,7 @@ import glob
 
 def count_null_video(part):
 
-	video_path = '/home/nfs/datasets/PHDD/' + part
+	video_path = '/home/nfs/datasets/PHDD/' + part + '/'
 	
 	videos = glob.glob(video_path+'*.mp4')
 	
