@@ -7,7 +7,7 @@ import pdb
 import csv
 
 
-def download_videos(fname):
+def count_videos(fname):
 
 	with open(fname, newline='') as csvfile:
 		
@@ -22,8 +22,27 @@ def download_videos(fname):
 			vid_dict[yid] = 1
 				
 		print(fname + ' video number:{}'.format(len(vid_dict)))
-				
+
+
+def video_ID_list(fname):
+	with open(fname, newline='') as csvfile:
+		
+		csv_reader = csv.reader(csvfile)
+		
+		# Skip header
+		next(csv_reader)
+		
+		vid_dict = {}
+		for video_meta in csv_reader:
+			yid = video_meta[0]
+			vid_dict[yid] = 1
+
+	vid_list = list(vid_dict.keys())
+
+	return vid_list
+
+
 if __name__=='__main__':
-    download_videos('training.csv')
-    download_videos('testing.csv')
+	count_videos('training.csv')
+	count_videos('testing.csv')
     
