@@ -57,6 +57,12 @@ def video_list(dirname):
 		# writer.writerows(nonexist_vid)
 		for item in nonexist_vid:
 			writer.writerow([item])
+
+	with open('PHD-GIFs_train_all.csv', 'w', newline='') as file:
+		writer = csv.writer(file)
+		# writer.writerows(nonexist_vid)
+		for item in all_vid:
+			writer.writerow([item])
 	
 	
 # 	with open ('train_videos_done', 'rb') as fp:
