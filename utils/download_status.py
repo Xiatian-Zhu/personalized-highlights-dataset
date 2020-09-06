@@ -17,10 +17,14 @@ import csv
 
 def video_list(dirname):
 
-	vfiles = glob.glob(dirname+'*.mp4')
-# 	cfiles = glob.glob('./*.csv')
-	
-	print('*** {} mp4 videos downloaded'.format(len(vfiles)))
+	exts = ['.webm', '.mp4', '.mkv']
+
+	vfiles = []
+	for ext in exts:
+		vfiles = vfiles + glob.glob(dirname + '*' + ext)
+	# 	cfiles = glob.glob('./*.csv')
+		
+	print('*** videos downloaded {}'.format(len(vfiles)))
 
 	# pdb.set_trace()
 	exist_vid = vfiles.copy()
@@ -69,5 +73,4 @@ def video_list(dirname):
 # 		vlist = pickle.load(fp)
 				
 if __name__=='__main__':
-    # video_list('./train/')
 	video_list('/home/nfs/datasets/PHDD/train/')
